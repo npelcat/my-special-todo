@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #5a154e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.quote {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 0.8rem;
+}
+
+.header {
+  text-align: center;
+}
+
+input[type="text"] {
+  appearance: none;
+  border: none;
+  outline: none;
+  border-bottom: 0.2em solid #e91e63;
+  background: rgba(#e91e63, 0.2);
+  border-radius: 0.2em 0.2em 0 0;
+  padding: 0.4em;
+  color: #e91e63;
+  margin-right: 2rem;
+}
+
+input[type="number"] {
+  width: 3em;
+  padding: 0.5em;
+  border: 0.2em solid #e91e63;
+  border-radius: 1em;
+  text-align: center;
+  color: #e91e63;
+  appearance: textfield;
+  margin: 0;
+  &::-webkit-inner-spin-button {
+    opacity: 1;
+    background: red;
+  }
+}
+
+.days {
+  color: #e91e63;
+}
+
+button {
+  appearance: none;
+  border: 0.2em solid #e91e63;
+  background: hsl(0 0 0/0);
+  padding: 0.85em 1.5em;
+  color: #e91e63;
+  border-radius: 2em;
+  transition: 1s;
+  margin: 2rem;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background: #e91e63;
+  color: #fff;
+}
+
+.bin {
+  font-size: 1.2rem;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid #e91e63;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #e91e63;
+  background-color: CanvasText;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform-origin: left top;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.task {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
