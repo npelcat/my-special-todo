@@ -2,6 +2,7 @@ import React, { ChangeEvent, useState } from "react";
 import "./App.css";
 import { ITask } from "./Interfaces";
 import ToDo from "./components/ToDo";
+import Quote from "./components/Quote";
 
 const App = () => {
   const [task, setTask] = useState<string>("");
@@ -36,36 +37,26 @@ const App = () => {
   };
 
   return (
-    <div className="App-header">
-      <div className="header">
-        <div className="quote">
-          <h1>
-            "Imagination and fiction make up more than three quarters of our
-            real life."
-          </h1>
-          <h2>
-            <i>Simone Weil</i>
-          </h2>
-        </div>
-        <div className="input-container">
-          <input
-            type="text"
-            name="task"
-            placeholder="Add a task"
-            value={task}
-            onChange={handleChange}
-          />
-          <input
-            type="number"
-            name="deadline"
-            placeholder="Set a deadline (in days)"
-            value={deadline}
-            onChange={handleChange}
-          />
-          <span className="days"> jour(s)</span>
-        </div>
-        <button onClick={addTask}>Add</button>
+    <div className="App">
+      <Quote />
+      <div className="input-container">
+        <input
+          type="text"
+          name="task"
+          placeholder="Add a task"
+          value={task}
+          onChange={handleChange}
+        />
+        <input
+          type="number"
+          name="deadline"
+          placeholder="Set a deadline (in days)"
+          value={deadline}
+          onChange={handleChange}
+        />
+        <span className="days"> jour(s)</span>
       </div>
+      <button onClick={addTask}>Add</button>
       <div className="todoList">
         {todo.map((task: ITask, key: number) => {
           return <ToDo key={key} task={task} completeTask={completeTask} />;

@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  background-color: #5a154e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family: "Maitree", serif;
 }
 
 .App-logo {
@@ -11,15 +18,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #5a154e;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -38,12 +36,10 @@
 .quote {
   text-align: center;
   font-size: 1rem;
+  font-family: "Dancing Script", cursive;
   margin-bottom: 5rem;
   margin-top: 2rem;
-}
-
-h2 {
-  font-size: 0.8rem;
+  padding: 0 2rem;
 }
 
 .header {

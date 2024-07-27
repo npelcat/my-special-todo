@@ -1,6 +1,6 @@
 # My-special-todo
 
-My personalized todo with React
+My personalized todo with React-TypeScript
 
 Création d'une To Do List pour me familiariser un peu plus avec les changements d'états.
 
